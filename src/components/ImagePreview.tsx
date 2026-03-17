@@ -19,7 +19,7 @@ export default function ImagePreview({
           onClick={() => window.location.reload()}
           className="text-blue-600 hover:text-blue-800 underline"
         >
-          Try again
+          重试
         </button>
       </div>
     )
@@ -30,7 +30,7 @@ export default function ImagePreview({
       <div className="flex items-center justify-center h-64 bg-gray-100 rounded-lg">
         <div className="text-center text-gray-500">
           <div className="text-4xl mb-2">🖼️</div>
-          <p>Upload an image to see preview</p>
+          <p>上传图片以查看预览</p>
         </div>
       </div>
     )
@@ -40,7 +40,7 @@ export default function ImagePreview({
     <div className="space-y-4">
       {/* Original Image */}
       <div>
-        <h3 className="text-lg font-medium text-gray-700 mb-2">Original</h3>
+        <h3 className="text-lg font-medium text-gray-700 mb-2">原始图片</h3>
         <div className="border rounded-lg overflow-hidden">
           <img
             src={originalImage}
@@ -54,14 +54,14 @@ export default function ImagePreview({
       {isProcessing && (
         <div className="text-center py-8">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Removing background...</p>
+          <p className="text-gray-600">正在移除背景...</p>
         </div>
       )}
 
       {/* Processed Image */}
       {processedImage && !isProcessing && (
         <div>
-          <h3 className="text-lg font-medium text-gray-700 mb-2">Result</h3>
+          <h3 className="text-lg font-medium text-gray-700 mb-2">处理结果</h3>
           <div className="border rounded-lg overflow-hidden mb-4">
             <img
               src={processedImage}
@@ -79,7 +79,7 @@ export default function ImagePreview({
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             </svg>
-            Download Result
+            下载结果
           </a>
         </div>
       )}

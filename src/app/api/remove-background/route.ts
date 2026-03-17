@@ -14,12 +14,12 @@ export async function POST(request: NextRequest) {
     // Convert base64 to buffer
     const imageBuffer = Buffer.from(image.split(',')[1], 'base64')
 
+    // Create blob from buffer
+    const blob = new Blob([imageBuffer], { type: 'image/jpeg' })
+
     // Call Remove.bg API
     const formData = new FormData()
-    formData.append('image', imageBuffer, {
-      filename: 'input.jpg',
-      contentType: 'image/jpeg'
-    })
+    formData.append('image', blob, 'input.jpg')
     formData.append('size', 'auto')
     formData.append('format', 'png')
 

@@ -51,10 +51,10 @@ export default function Home() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
-            AI Background Remover
+            AI背景移除器
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Remove backgrounds from images with AI - Free, fast, and easy to use
+            使用AI移除图像背景 - 免费、快速、简单易用
           </p>
         </div>
 
@@ -64,7 +64,7 @@ export default function Home() {
             {/* Upload Section */}
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-                Upload Your Image
+                上传您的图片
               </h2>
               <ImageUpload onImageUpload={handleImageUpload} />
               
@@ -75,7 +75,7 @@ export default function Home() {
                     disabled={isProcessing}
                     className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 disabled:bg-gray-400 transition-colors"
                   >
-                    {isProcessing ? 'Processing...' : 'Remove Background'}
+                    {isProcessing ? '处理中...' : '移除背景'}
                   </button>
                 </div>
               )}
@@ -84,7 +84,7 @@ export default function Home() {
             {/* Preview Section */}
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-                Preview
+                预览
               </h2>
               <ImagePreview 
                 originalImage={originalImage}

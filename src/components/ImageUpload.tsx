@@ -42,14 +42,14 @@ export default function ImageUpload({ onImageUpload }: ImageUploadProps) {
         <div className="text-4xl">📸</div>
         <div>
           <p className="text-lg font-medium text-gray-700">
-            {isDragActive ? 'Drop the image here' : 'Drag & drop an image here'}
+            {isDragActive ? '将图片拖放到这里' : '拖拽图片到这里'}
           </p>
           <p className="text-sm text-gray-500 mt-2">
-            or click to select a file
+            或点击选择文件
           </p>
         </div>
         <div className="text-sm text-gray-400">
-          Supports: JPG, PNG, WebP (Max 10MB)
+          支持：JPG、PNG、WebP（最大10MB）
         </div>
       </div>
     </div>
